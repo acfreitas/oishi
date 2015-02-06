@@ -1,7 +1,7 @@
 # Header
 menu:
-  首页: /
-  归档: /archives
+  Home: /
+  Archives: /archives
 
 # Content
 excerpt_link: ...
@@ -34,10 +34,9 @@ duoshuo_shortname:
 # Baidu share
 baidushare: false
 
-# scrollUp 样式
+# scrollUp image
 scrollUp: image
 
 # social
 social:
-  github: https://github.com/henryhuang
-  weibo: http://weibo.com/626242034
+  github: https://github.com/acfreitas
