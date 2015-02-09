@@ -2,6 +2,10 @@
 
 A hexo theme based on [Landscape plus](https://github.com/xiangming/landscape-plus) 
 
+## Demo
+
+[Antônio Carlos](http://acfreitas.com/)
+
 ## Usage
 
 ``` bash
