@@ -1,36 +1,25 @@
 # Oishi
 
-根据landscape-plus主题和Writing主题进行修改。
+A hexo theme based on [Landscape plus](https://github.com/xiangming/landscape-plus) 
 
-## 演示
-
-你可以点击[这里](http://www.cnhalo.com/)，查看演示。
-
-## 安装
+## Usage
 
 ``` bash
-$ git clone https://github.com/henryhuang/oishi.git themes/oishi
+$ git clone https://github.com/acfreitas/oishi.git themes/oishi
 ```
-**Oishi 需要 Hexo 2.7 及以上版本.**
+## Requirements
 
-## 启用
+Hexo 2.7+ 
 
-修改主题的设置文件`_config.yml`，把`theme`的值设置为`oshi`
+## Configure
 
-## 更新
-
-``` bash
-cd themes/oishi
-git pull
-```
-
-## 配置
+_config.yml
 
 ```yml
 # Header
 menu:
-  首页: /
-  归档: /archives
+  Home: /
+  Archives: /archives
 
 # Content
 excerpt_link: ...
@@ -63,13 +52,74 @@ duoshuo_shortname:
 # Baidu share
 baidushare: false
 
-# scrollUp 样式
+# scrollUp image
 scrollUp: image
 
 # social
 social:
-  github: https://github.com/github_id
-  weibo: http://weibo.com/weibo_id
+  github: https://github.com/username
 ```
 
-## 所有新特性
+## Translation
+
+languages/default.yml
+
+```yml
+archive: Archives
+categories: Categories
+recent_posts: Recent
+tags: Tags
+tagcloud: Tag Cloud
+links: Links
+excerpt_link: More
+share: Share
+search: Search
+prev: Prev
+next: Next
+comment: Comment
+contents: Contents
+page: Page %d
+menu: Menu
+rss: RSS
+showsidebar: Show Sidebar
+hidesidebar: Hide Sidebar
+updated: Updated
+```
+layout/_partial/post/nav.ejs
+
+```js
+
+<% if (post.prev || post.next){ %>
+<nav id="article-nav">
+  <% if (post.prev){ %>
+    <a href="<%- url_for(post.prev.path) %>" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Recent</strong>
+      <div class="article-nav-title">
+        <% if (post.prev.title){ %>
+          <%= post.prev.title %>
+        <% } else { %>
+          (no title)
+        <% } %>
+      </div>
+    </a>
+  <% } %>
+  <% if (post.next){ %>
+    <a href="<%- url_for(post.next.path) %>" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"><%= post.next.title %></div>
+    </a>
+  <% } %>
+</nav>
+<% } %>
+```
+
+## Icons
+
+source/logo.png
+and 
+source/favicon.ico
+
+## More information
+
+* [Read the documentation](http://hexo.io/)
+* [See the theme list](https://github.com/hexojs/hexo/wiki/Themes)
