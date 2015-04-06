@@ -2,6 +2,7 @@
 menu:
   Home: /
   Arquivos: /archives
+  Feed: rss2.xml
 
 # Content
 excerpt_link: ...
