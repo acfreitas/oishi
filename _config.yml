@@ -2,7 +2,6 @@
 menu:
   Home: /
   Arquivos: /archives
-  Feed: rss2.xml
 
 # Content
 excerpt_link: ...
@@ -22,7 +21,7 @@ widgets:
 links:
 
 # Miscellaneous
-google_analytics:
+google_analytics: UA-59466959-1
 favicon: /favicon.png
 twitter:
 google_plus:
